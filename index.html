@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Poolsvertalen.com - tłumacz przysięgły języka niderlandzkiego</title>
+<meta name="description" content="Podgląd nowej strony Poolsvertalen.com - Barbara Chodkiewicz, tłumacz przysięgły języka niderlandzkiego.">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/lora-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/man-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/hero-m.webp" media="(max-width:899px)">
+<link rel="preload" as="image" href="img/hero-d.webp" media="(min-width:900px)">
+<style>
+@font-face{font-family:"Lora";font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/lora-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00C0-00FF,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026,U+20AC}
+@font-face{font-family:"Lora";font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/lora-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/man-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00C0-00FF,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026,U+20AC}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/man-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+:root{--ink:#111111;--green:#1E4220;--green2:#2F5131;--grey:#F2F2F2;--wall:#E9ECED;--line:#D5D9DA;--muted:#4A5250;--w:min(92vw,1640px);--hh:68px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--hh) + 12px)}
+html[lang=pl] .nl,html[lang=nl] .pl{display:none!important}
+body{margin:0;background:#fff;color:var(--ink);font:400 17px/1.65 "Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Lora",Georgia,serif;font-weight:600;line-height:1.15;margin:0;letter-spacing:-.01em}
+p{margin:0 0 1em}
+.wrap{width:var(--w);margin:0 auto}
+.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;z-index:99;background:#fff;padding:8px 12px}
+
+/* motyw: narożniki ramki z logo (prawy górny + lewy dolny) */
+.fr{position:relative}
+.fr::before,.fr::after{content:"";position:absolute;width:var(--c,30px);height:var(--c,30px);border:0 solid var(--fc,var(--ink));pointer-events:none}
+.fr::before{top:calc(var(--o,14px) * -1);right:calc(var(--o,14px) * -1);border-top-width:2px;border-right-width:2px}
+.fr::after{bottom:calc(var(--o,14px) * -1);left:calc(var(--o,14px) * -1);border-bottom-width:2px;border-left-width:2px}
+
+/* przyciski */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:54px;padding:14px 28px;background:var(--green);color:#fff;text-decoration:none;font-weight:700;font-size:16px;border:0;border-radius:2px;cursor:pointer;font-family:inherit;transition:background .2s}
+.btn::before,.btn::after{content:"";position:absolute;width:10px;height:10px;border:0 solid var(--green);transition:transform .25s}
+.btn::before{top:-6px;right:-6px;border-top-width:2px;border-right-width:2px}
+.btn::after{bottom:-6px;left:-6px;border-bottom-width:2px;border-left-width:2px}
+.btn:hover{background:#163218}.btn:hover::before{transform:translate(3px,-3px)}.btn:hover::after{transform:translate(-3px,3px)}
+.btn.light{background:#fff;color:var(--green)}.btn.light::before,.btn.light::after{border-color:#fff}
+
+/* nagłówek */
+.top{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);height:var(--hh)}
+.top .wrap{height:100%;display:flex;align-items:center;gap:28px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
+.brand svg{width:46px;height:42px}
+.brand span{display:flex;flex-direction:column;line-height:1.15}
+.brand b{font-family:"Lora",serif;font-weight:600;font-size:19px}
+.brand small{font-size:13px;color:var(--muted)}
+.nav{display:flex;gap:26px;margin-left:auto}
+.nav a{text-decoration:none;font-weight:600;font-size:15.5px;padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover{border-color:var(--green)}
+.nav .btn{display:none}
+.lang{display:flex;align-items:center;gap:2px;--c:9px;--o:5px;padding:2px;flex:none}
+.lang button{font:700 14px/1 "Manrope",sans-serif;padding:9px 10px;border:0;background:none;color:var(--muted);cursor:pointer;border-radius:2px}
+.lang button[aria-pressed=true]{background:var(--ink);color:#fff}
+.top .btn{min-height:44px;padding:10px 18px;font-size:15px}
+.burger{display:none;width:46px;height:46px;border:0;background:none;cursor:pointer;padding:11px;margin-right:-10px}
+.burger i{display:block;height:2px;background:var(--ink);margin:6px 0;transition:transform .25s,opacity .2s}
+.menu-open .burger i:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.menu-open .burger i:nth-child(2){opacity:0}
+.menu-open .burger i:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;background:var(--wall);display:flex;flex-direction:column;min-height:calc(100svh - var(--hh));overflow:hidden}
+.hero-photo{position:absolute;top:0;right:0;bottom:var(--band,86px);aspect-ratio:947/850;max-width:62%}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:right top}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--wall) 0%,rgba(233,236,237,.85) 14%,rgba(233,236,237,0) 46%)}
+.hero-main{position:relative;flex:1;display:flex;align-items:center;padding:56px 0}
+.hero-txt{max-width:min(720px,48vw);--c:44px;--o:26px;padding:8px 0}
+.hero h1{font-size:clamp(40px,4.2vw,74px);line-height:1.08}
+.hero .lead{font-size:clamp(17px,1.25vw,21px);color:#262C2A;max-width:34em;margin:22px 0 0}
+.hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px;margin-top:34px}
+.tel{font-weight:700;font-size:18px;text-decoration:none;border-bottom:2px solid var(--green);padding-bottom:2px}
+.band{position:relative;background:var(--green);color:#fff;min-height:var(--band,86px);display:flex;align-items:center}
+.band .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:14px 46px;padding:16px 0}
+.band .reg{display:flex;align-items:baseline;gap:10px;--c:10px;--o:7px;--fc:rgba(255,255,255,.75);padding:2px 4px}
+.band .reg small{font-size:13.5px;opacity:.8}
+.band .reg b{font-family:"Lora",serif;font-size:21px;font-weight:600;letter-spacing:.01em}
+.band .since{font-size:15px;opacity:.9}
+.band .btel{display:none}
+.band .mail{margin-left:auto;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.5)}
+
+/* sekcje */
+section{padding:clamp(70px,8vw,130px) 0}
+.nw{white-space:nowrap}
+.head{max-width:1100px;margin-bottom:clamp(36px,4vw,60px)}
+.head h2{font-size:clamp(32px,3.1vw,54px)}
+.head p{font-size:clamp(17px,1.15vw,19px);color:var(--muted);margin:18px 0 0;max-width:48em}
+.mark{display:inline-block;width:22px;height:22px;flex:none;position:relative;--c:12px;--o:0px}
+
+/* usługi */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,3vw,56px)}
+.svc{display:flex;flex-direction:column}
+.car-wrap{position:relative;--c:34px;--o:12px;margin:12px 12px 30px}
+.car{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;aspect-ratio:483/400;background:var(--grey);cursor:grab;touch-action:pan-x pan-y}
+.car::-webkit-scrollbar{display:none}
+.car.drag{cursor:grabbing;scroll-snap-type:none}
+.car button{flex:0 0 100%;scroll-snap-align:start;border:0;padding:0;background:none;cursor:zoom-in}
+.car img{width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none}
+.car-nav{position:absolute;right:10px;bottom:10px;display:flex;align-items:center;gap:6px;background:rgba(17,17,17,.78);color:#fff;border-radius:2px;padding:4px;font-size:13px;font-weight:700}
+.car-nav button{width:32px;height:32px;border:0;background:none;color:#fff;cursor:pointer;font:700 17px/1 sans-serif}
+.car-nav span{min-width:30px;text-align:center}
+.svc h3{font-size:clamp(25px,1.9vw,32px)}
+.svc .sub{color:var(--muted);margin:12px 0 18px}
+.svc ul{list-style:none;padding:0;margin:0 0 22px;border-top:1px solid var(--line)}
+.svc li{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:16px;line-height:1.45}
+.svc li .mark{width:14px;height:14px;--c:8px;margin-top:5px}
+.more{margin-top:auto;font-weight:700;color:var(--green);text-decoration:none;align-self:flex-start;border-bottom:2px solid currentColor}
+
+/* notariusz - mocna sekcja */
+.notar{background:var(--green);color:#fff}
+.notar-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(40px,6vw,110px);align-items:start}
+.notar h2{font-size:clamp(28px,2.6vw,46px);line-height:1.22;--c:40px;--o:22px;--fc:#fff;padding:4px 0}
+.notar .law{margin-top:34px;font-size:18px;color:rgba(255,255,255,.88);max-width:44em}
+.notar h3{font-size:24px;margin-bottom:18px}
+.notar ul{list-style:none;padding:0;margin:0 0 34px}
+.notar li{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.notar li .mark{width:14px;height:14px;--c:8px;--fc:#fff;margin-top:6px}
+.notar figure{margin:0 0 40px;--c:32px;--o:12px;--fc:#fff}
+.notar figure img{width:100%;aspect-ratio:483/330;object-fit:cover}
+
+/* o mnie */
+.about-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px,6vw,120px);align-items:center}
+.about-ph{--c:46px;--o:18px;margin:18px}
+.about-ph img{width:100%;aspect-ratio:483/456;object-fit:cover}
+.about-txt .head{margin-bottom:26px}
+.about-txt p{max-width:42em}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:0 clamp(28px,3vw,60px);margin-top:clamp(56px,6vw,90px);border-top:2px solid var(--ink)}
+.values h3{font-size:clamp(20px,1.4vw,24px);margin-bottom:12px}
+.val{padding:26px 0 30px;border-bottom:1px solid var(--line)}
+.val p{margin:0;color:var(--muted)}
+.values-h{font-size:clamp(26px,2.2vw,36px);margin:clamp(56px,6vw,90px) 0 0;padding-bottom:22px}
+.values-h+.values{margin-top:0}
+
+/* wycena + formularz */
+.quote{background:var(--grey)}
+.quote-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,110px);align-items:start}
+.steps{list-style:none;padding:0;margin:34px 0 46px;display:grid;grid-template-columns:repeat(2,1fr);gap:0 32px}
+.steps li{display:flex;gap:14px;padding:16px 0;border-top:1px solid #C9CECF;font-weight:700;font-size:17px;line-height:1.4}
+.steps li .mark{width:16px;height:16px;--c:9px;margin-top:3px;--fc:var(--green)}
+.contact-h{font-size:26px;margin-bottom:16px}
+.contact-list{list-style:none;padding:0;margin:0}
+.contact-list li{padding:10px 0;border-bottom:1px solid #C9CECF;display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline}
+.contact-list small{min-width:110px;color:var(--muted);font-size:14px}
+.contact-list a{font-weight:700;text-decoration:none}
+.form{background:#fff;padding:clamp(26px,3vw,46px);--c:40px;--o:14px;margin:14px}
+.form h3{font-size:28px;margin-bottom:22px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;font-weight:600;font-size:15px}
+.field input,.field textarea{font:inherit;font-weight:400;font-size:16px;padding:13px 14px;border:1px solid #B9C0C1;border-radius:2px;background:#fff;color:var(--ink);width:100%}
+.field input:focus,.field textarea:focus{outline:2px solid var(--green);outline-offset:1px;border-color:var(--green)}
+.drop{display:flex;align-items:center;justify-content:center;text-align:center;min-height:84px;border:1.5px dashed #9BA4A5;padding:14px;color:var(--muted);font-weight:600;cursor:pointer;font-size:15px}
+.drop input{position:absolute;opacity:0;width:1px;height:1px}
+.consent{display:flex;gap:10px;font-size:14.5px;color:var(--muted);margin:16px 0 22px;align-items:flex-start}
+.consent input{margin-top:4px;width:18px;height:18px;accent-color:var(--green);flex:none}
+.form .note{margin:14px 0 0;font-size:14px;color:var(--green);font-weight:600;min-height:1.4em}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px,6vw,110px);align-items:start}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-child{border-top:2px solid var(--ink)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:22px 0;font-family:"Lora",serif;font-weight:600;font-size:clamp(19px,1.35vw,23px);line-height:1.3}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:14px;height:14px;margin-top:6px;border-right:2px solid var(--green);border-bottom:2px solid var(--green);transform:rotate(45deg);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(225deg) translate(-4px,-4px)}
+.faq details p{margin:0 0 24px;color:var(--muted);max-width:46em}
+
+/* stopka */
+.foot{background:var(--ink);color:#C9CDCC;padding:clamp(56px,6vw,90px) 0 28px;font-size:16px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.foot .brand b{color:#fff}.foot .brand small{color:#A9AEAD}
+.foot .brand svg{width:54px;height:49px}
+.foot h3{font-family:"Manrope",sans-serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:14px}
+.foot ul{list-style:none;padding:0;margin:0}
+.foot li{margin:0 0 8px}
+.foot a{text-decoration:none}.foot a:hover{color:#fff;text-decoration:underline}
+.foot .claim{margin:20px 0 0;max-width:26em}
+.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 30px;border-top:1px solid #2D3130;margin-top:48px;padding-top:22px;font-size:14px;color:#9EA3A2}
+
+/* pasek mobilny */
+.mbar{display:none}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(10,12,11,.94);display:none;align-items:center;justify-content:center;flex-direction:column;padding:56px 16px}
+.lb.on{display:flex}
+.lb img{max-width:min(92vw,900px);max-height:78vh;object-fit:contain}
+.lb p{color:#fff;margin:14px 0 0;font-size:15px}
+.lb button{position:absolute;background:none;border:0;color:#fff;cursor:pointer;font:400 34px/1 sans-serif;width:52px;height:52px}
+.lb .x{top:10px;right:10px}.lb .pv{left:8px;top:50%;transform:translateY(-50%)}.lb .nx{right:8px;top:50%;transform:translateY(-50%)}
+
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+
+@media (min-width:1920px){.services{gap:70px}}
+@media (max-width:1180px){.nav{gap:18px}.nav a{font-size:15px}.top .btn{display:none}}
+@media (max-width:899px){
+  :root{--hh:62px}
+  body{font-size:16.5px}
+  .brand svg{width:40px;height:36px}.brand b{font-size:17px}.brand small{font-size:12px}
+  .top .wrap{gap:10px}
+  .lang{margin-left:auto}
+  .burger{display:block}
+  .nav{position:fixed;left:0;right:0;top:var(--hh);bottom:0;background:#fff;flex-direction:column;gap:0;padding:12px 4vw 30px;transform:translateX(100%);visibility:hidden;transition:transform .3s,visibility 0s .3s;overflow-y:auto;margin:0}
+  .nav a{font-family:"Lora",serif;font-size:26px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .nav .btn{display:flex;margin-top:28px;font-family:"Manrope",sans-serif;font-size:17px;border-bottom:0}
+  .menu-open .nav{transform:none;visibility:visible;transition:transform .3s}
+  .menu-open{overflow:hidden}
+  .hero{min-height:calc(100svh - var(--hh))}
+  .hero-photo{position:relative;inset:auto;max-width:none;width:100%;aspect-ratio:auto;height:min(51svh,calc(100vw * 850 / 617))}
+  .hero-photo img{object-position:center top}
+  .hero-photo::after{background:linear-gradient(180deg,rgba(233,236,237,0) 52%,rgba(233,236,237,.8) 80%,var(--wall) 100%)}
+  .hero-main{padding:0 0 30px;margin-top:-92px;align-items:flex-start;flex:1}
+  .hero-txt{max-width:none;--c:26px;--o:12px;padding:0 4px}
+  .hero h1{font-size:clamp(31px,8.6vw,40px)}
+  .hero .lead{font-size:16.5px;margin-top:16px}
+  .hero-cta{margin-top:26px;gap:16px 22px}
+  .hero-cta .tel{display:none}
+  .band .btel{display:inline;font-weight:700;text-decoration:none;font-size:16px;border-bottom:1px solid rgba(255,255,255,.5)}
+  .band .wrap{gap:10px 20px;padding:14px 0}
+  .band .reg b{font-size:18px}.band .reg small{font-size:12.5px}
+  .band .since{display:none}
+  .band .mail{display:none}
+  .services{grid-template-columns:1fr;gap:56px}
+  .notar h2{--o:10px;--c:28px;padding:4px 6px 4px 0}
+  .notar-grid,.about-grid,.quote-grid,.faq-grid{grid-template-columns:1fr}
+  .about-ph{max-width:460px}
+  .values{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .row{grid-template-columns:1fr;gap:0}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:34px 20px}
+  .foot-grid>div:first-child{grid-column:1/-1}
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;background:#fff;border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s;padding-bottom:env(safe-area-inset-bottom)}
+  .mbar.on{transform:none}
+  .mbar a{display:flex;align-items:center;justify-content:center;min-height:56px;font-weight:700;text-decoration:none;font-size:15.5px}
+  .mbar a+a{background:var(--green);color:#fff}
+  .foot{padding-bottom:90px}
+}
+@media (max-width:380px){.brand small{display:none}.lang button{padding:8px 8px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#start" aria-label="Poolsvertalen.com - strona główna">
+      <svg viewBox="0 0 80 72" aria-hidden="true"><path d="M47 4h26v26" fill="none" stroke="#111" stroke-width="2.2"/><path d="M7 42v26h26" fill="none" stroke="#111" stroke-width="2.2"/><text x="24" y="46" font-family="Lora,Georgia,serif" font-size="34" fill="#111">B</text><text x="35" y="56" font-family="Lora,Georgia,serif" font-size="34" fill="#1E4220">C</text></svg>
+      <span><b>Poolsvertalen.com</b><small>Barbara Chodkiewicz</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Menu">
+      <a href="#tlumaczenia"><span class="pl">Tłumaczenia</span><span class="nl">Vertalingen</span></a>
+      <a href="#notarialne"><span class="pl">Notariusz</span><span class="nl">Notaris</span></a>
+      <a href="#o-mnie"><span class="pl">O mnie</span><span class="nl">Over mij</span></a>
+      <a href="#wycena"><span class="pl">Bezpłatna wycena</span><span class="nl">Gratis offerte</span></a>
+      <a href="#pytania"><span class="pl">Pytania</span><span class="nl">Vragen</span></a>
+      <a class="btn" href="#wycena"><span class="pl">Zamów wycenę</span><span class="nl">Gratis offerte aanvragen</span></a>
+    </nav>
+    <div class="lang fr" role="group" aria-label="Język / Taal">
+      <button type="button" data-l="pl" aria-pressed="true">PL</button>
+      <button type="button" data-l="nl" aria-pressed="false">NL</button>
+    </div>
+    <a class="btn" href="#wycena"><span class="pl">Zamów wycenę</span><span class="nl">Gratis offerte aanvragen</span></a>
+    <button class="burger" type="button" aria-label="Menu" aria-controls="nav" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="tresc">
+<section class="hero" id="start" style="padding:0">
+  <picture class="hero-photo">
+    <source media="(max-width:899px)" srcset="img/hero-m.webp" width="617" height="850">
+    <img src="img/hero-d.webp" width="947" height="850" alt="Barbara Chodkiewicz, tłumacz przysięgły języka niderlandzkiego" fetchpriority="high">
+  </picture>
+  <div class="hero-main">
+    <div class="wrap">
+      <div class="hero-txt fr">
+        <h1><span class="pl">Profesjonalne tłumaczenia – język polski &amp; niderlandzki</span><span class="nl">Professionele vertalingen – Pools &amp; Nederlands</span></h1>
+        <p class="lead"><span class="pl">Profesjonalne tłumaczenia notarialne, pisemne i ustne dokumentów urzędowych, prawnych, biznesowych czy marketingowych.</span><span class="nl">Beëdigde en professionele vertalingen – schriftelijk en mondeling – van officiële documenten, contracten, zakelijke teksten en marketingmateriaal.</span></p>
+        <div class="hero-cta">
+          <a class="btn" href="#wycena"><span class="pl">Zamów bezpłatną wycenę</span><span class="nl">Vraag gratis een offerte aan</span></a>
+          <a class="tel" href="tel:+31622624226">+31 622 624 226</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="band">
+    <div class="wrap">
+      <span class="reg fr"><small><span class="pl">Holandia</span><span class="nl">Nederland</span></small><b>RBTV – 349</b></span>
+      <span class="reg fr"><small><span class="pl">Polska</span><span class="nl">Polen</span></small><b>TP/57/16</b></span>
+      <span class="since"><span class="pl">Tłumacz przysięgły od 2006 r.</span><span class="nl">Beëdigd vertaler sinds 2006</span></span>
+      <a class="btel" href="tel:+31622624226">+31 622 624 226</a>
+      <a class="mail" href="mailto:info@poolsvertalen.com">info@poolsvertalen.com</a>
+    </div>
+  </div>
+</section>
+
+<section id="tlumaczenia">
+  <div class="wrap">
+    <div class="head">
+      <h2><span class="pl">Usługi tłumaczeniowe <span class="nw">PL-NL</span> i <span class="nw">NL-PL</span></span><span class="nl">Vertaaldiensten <span class="nw">PL–NL</span> en <span class="nw">NL–PL</span></span></h2>
+      <p><span class="pl">Jako doświadczony tłumacz przysięgły języka niderlandzkiego oferuję kompleksowe usługi tłumaczeniowe w parach językowych PL-NL oraz NL-PL. Wykonuję zarówno tłumaczenia poświadczone, jak i zwykłe, zapewniając najwyższą jakość i zgodność z obowiązującymi przepisami.</span><span class="nl">Als beëdigd en ervaren vertaler Nederlands bied ik uitgebreide vertaaldiensten aan in de taalkoppels PL–NL en NL–PL. Ik verzorg zowel beëdigde als reguliere vertalingen en garandeer daarbij de hoogste kwaliteit en naleving van de geldende regelgeving.</span></p>
+    </div>
+    <div class="services">
+      <article class="svc">
+        <div class="car-wrap fr">
+          <div class="car" data-car>
+            <button type="button" data-lb><img src="img/notarialne.webp" width="483" height="456" loading="lazy" alt="Pieczęć na dokumencie notarialnym"></button>
+            <button type="button" data-lb><img src="img/pieczec.webp" width="483" height="456" loading="lazy" alt="Poświadczenie tłumaczenia pieczęcią"></button>
+          </div>
+        </div>
+        <h3><span class="pl">Tłumaczenia notarialne</span><span class="nl">Notariële vertalingen</span></h3>
+        <p class="sub"><span class="pl">Profesjonalne tłumaczenia przysięgłe i notarialne – precyzyjnie, terminowo, z pełną poufnością.</span><span class="nl">Professionele beëdigde en notariële vertalingen – nauwkeurig, tijdig en volledig vertrouwelijk.</span></p>
+        <ul>
+          <li><i class="mark fr"></i><span class="pl">Notarialne poświadczenie dziedziczenia</span><span class="nl">Notariële verklaringen van erfrecht</span></li>
+          <li><i class="mark fr"></i><span class="pl">Akty notarialne, umowy cywilnoprawne, testamenty</span><span class="nl">Notariële akten, civielrechtelijke overeenkomsten en testamenten</span></li>
+          <li><i class="mark fr"></i><span class="pl">Dokumenty związane z obrotem nieruchomościami</span><span class="nl">Documenten met betrekking tot vastgoedtransacties</span></li>
+          <li><i class="mark fr"></i><span class="pl">Pełnomocnictwa i pełnomocnictwa notarialne</span><span class="nl">Volmachten en notariële volmachten</span></li>
+        </ul>
+        <a class="more" href="#notarialne"><span class="pl">Tłumacz u notariusza</span><span class="nl">Vertaler bij de notaris</span></a>
+      </article>
+      <article class="svc">
+        <div class="car-wrap fr">
+          <div class="car" data-car>
+            <button type="button" data-lb><img src="img/pisemne.webp" width="483" height="456" loading="lazy" alt="Tłumaczenie pisemne dokumentu"></button>
+            <button type="button" data-lb><img src="img/pisemne-b.webp" width="483" height="456" loading="lazy" alt="Praca nad tłumaczeniem przy komputerze"></button>
+          </div>
+        </div>
+        <h3><span class="pl">Tłumaczenia pisemne</span><span class="nl">Schriftelijke vertalingen</span></h3>
+        <p class="sub"><span class="pl">Profesjonalne tłumaczenia pisemne – staranność, terminowość i pełne bezpieczeństwo danych.</span><span class="nl">Professionele schriftelijke vertalingen – zorgvuldigheid, stiptheid en volledige gegevensbescherming.</span></p>
+        <ul>
+          <li><i class="mark fr"></i><span class="pl">Dokumenty urzędowe i oficjalne</span><span class="nl">Officiële en overheidsdocumenten</span></li>
+          <li><i class="mark fr"></i><span class="pl">Akty notarialne i umowy</span><span class="nl">Notariële akten en overeenkomsten</span></li>
+          <li><i class="mark fr"></i><span class="pl">Tłumaczenia biznesowe</span><span class="nl">Zakelijke vertalingen</span></li>
+          <li><i class="mark fr"></i><span class="pl">Tłumaczenia marketingowe i reklamowe</span><span class="nl">Marketing- en reclamevertalingen</span></li>
+          <li><i class="mark fr"></i><span class="pl">Tłumaczenia osobiste</span><span class="nl">Persoonlijke vertalingen</span></li>
+        </ul>
+        <a class="more" href="#wycena"><span class="pl">Zamów bezpłatną wycenę</span><span class="nl">Vraag gratis een offerte aan</span></a>
+      </article>
+      <article class="svc">
+        <div class="car-wrap fr">
+          <div class="car" data-car>
+            <button type="button" data-lb><img src="img/ustne.webp" width="483" height="456" loading="lazy" alt="Tłumaczenie ustne online"></button>
+            <button type="button" data-lb><img src="img/ustne-b.webp" width="483" height="456" loading="lazy" alt="Tłumaczenie ustne podczas rozmowy"></button>
+          </div>
+        </div>
+        <h3><span class="pl">Tłumaczenia ustne</span><span class="nl">Tolkdiensten</span></h3>
+        <p class="sub"><span class="pl">Profesjonalne tłumaczenia ustne – precyzyjne wsparcie w każdej sytuacji prawnej, biznesowej i prywatnej.</span><span class="nl">Professionele mondelinge vertalingen – nauwkeurige ondersteuning in elke juridische, zakelijke en privé-situatie.</span></p>
+        <ul>
+          <li><i class="mark fr"></i><span class="pl">Tłumaczenia podczas spotkań u notariusza</span><span class="nl">Mondelinge vertalingen bij notariële afspraken</span></li>
+          <li><i class="mark fr"></i><span class="pl">Rozprawy sądowe i spotkania z urzędnikami</span><span class="nl">Rechtszittingen en afspraken met overheidsinstanties</span></li>
+          <li><i class="mark fr"></i><span class="pl">Tłumaczenia w kontekście biznesowym</span><span class="nl">Vertalingen in een zakelijke context</span></li>
+          <li><i class="mark fr"></i><span class="pl">Tłumaczenia dla klientów indywidualnych</span><span class="nl">Vertalingen voor particulieren</span></li>
+        </ul>
+        <a class="more" href="#wycena"><span class="pl">Zamów bezpłatną wycenę</span><span class="nl">Vraag gratis een offerte aan</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="notar" id="notarialne">
+  <div class="wrap notar-grid">
+    <div>
+      <h2 class="fr"><span class="pl">W Holandii podczas zakupu lub sprzedaży nieruchomości obecność tłumacza przysięgłego jest obowiązkowa, jeśli jedna ze stron nie posługuje się językiem niderlandzkim.</span><span class="nl">In Nederland is de aanwezigheid van een beëdigd vertaler verplicht bij de aankoop of verkoop van onroerend goed, indien een van de partijen de Nederlandse taal niet machtig is.</span></h2>
+      <div class="law">
+        <p class="pl">Wynika to bezpośrednio z artykułu 42 ust. 1 ustawy o notariacie (Wet op het notarisambt), który zobowiązuje notariusza do upewnienia się, że każda ze stron dokładnie rozumie treść aktu przed jego podpisaniem. Jako tłumacz przysięgły języka niderlandzkiego oferuję profesjonalne wsparcie językowe podczas czynności notarialnych. Dzięki mojemu doświadczeniu cały proces przebiega sprawnie, zgodnie z przepisami i – co równie ważne – bez stresu dla klienta.</p>
+        <p class="nl">Dit is vastgelegd in artikel 42, lid 1 van de Wet op het notarisambt, waarin staat dat de notaris moet garanderen dat elke partij de inhoud van de akte volledig begrijpt voordat deze wordt ondertekend. Als beëdigd vertaler Nederlands bied ik professionele taalondersteuning tijdens notariële procedures. Dankzij mijn ervaring verloopt het hele proces soepel, conform de regelgeving en – minstens zo belangrijk – zonder stress voor de cliënt.</p>
+      </div>
+      <a class="btn light" href="#wycena"><span class="pl">Zamów bezpłatną wycenę</span><span class="nl">Vraag gratis een offerte aan</span></a>
+    </div>
+    <div>
+      <figure class="fr"><img src="img/wiatrak.webp" width="483" height="456" loading="lazy" alt="Holenderski wiatrak"></figure>
+      <h3><span class="pl">Zakres tłumaczeń notarialnych:</span><span class="nl">Werkgebied notariële vertalingen:</span></h3>
+      <ul>
+        <li><i class="mark fr"></i><span class="pl">notarialne poświadczenie dziedziczenia,</span><span class="nl">notariële verklaringen van erfrecht,</span></li>
+        <li><i class="mark fr"></i><span class="pl">akty notarialne, umowy cywilnoprawne, testamenty,</span><span class="nl">notariële akten, civielrechtelijke overeenkomsten en testamenten,</span></li>
+        <li><i class="mark fr"></i><span class="pl">dokumenty związane z obrotem nieruchomościami (np. umowy sprzedaży, darowizny),</span><span class="nl">documenten met betrekking tot vastgoedtransacties (bijv. koop- of schenkingsakten),</span></li>
+        <li><i class="mark fr"></i><span class="pl">pełnomocnictwa i pełnomocnictwa notarialne,</span><span class="nl">volmachten en notariële volmachten,</span></li>
+        <li><i class="mark fr"></i><span class="pl">dokumenty potrzebne do założenia firmy, spółki czy zawarcia związku partnerskiego,</span><span class="nl">documenten die nodig zijn voor het oprichten van een bedrijf, een vennootschap of het aangaan van een geregistreerd partnerschap,</span></li>
+        <li><i class="mark fr"></i><span class="pl">inne dokumenty, które wymagają poświadczenia przez notariusza.</span><span class="nl">overige documenten waarvoor een notariële bekrachtiging vereist is.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="o-mnie">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-ph fr"><img src="img/o-mnie.webp" width="483" height="456" loading="lazy" alt="Barbara Chodkiewicz"></div>
+      <div class="about-txt">
+        <div class="head">
+          <h2><span class="pl">O mnie</span><span class="nl">Over mij</span></h2>
+          <p><span class="pl">Tłumacz przysięgły z wieloletnim doświadczeniem.</span><span class="nl">Beëdigd tolk/vertaler met jarenlange ervaring.</span></p>
+        </div>
+        <div class="pl">
+          <p>Nazywam się Barbara Chodkiewicz i od prawie 30 lat mieszkam w Holandii, gdzie zdobyłam doświadczenie jako tłumacz przysięgły języka niderlandzkiego.</p>
+          <p>Posiadam uprawnienia tłumacza w Polsce (TP/57/16) i Holandii (RBTV – 349), co zapewnia, że moje tłumaczenia są honorowane przez urzędy w obu krajach. Od 2006 roku świadczę usługi tłumaczeniowe, obejmujące szeroki zakres dokumentów – od urzędowych i prawniczych, przez notarialne, aż po teksty biznesowe.</p>
+          <p>Moje doświadczenie, zarówno jako tłumacz, jak i nauczycielka języka niderlandzkiego, pozwala mi precyzyjnie dostosować usługi do indywidualnych potrzeb klientów. Dbam o pełną poufność, terminowość oraz najwyższą jakość tłumaczeń, by ułatwić Ci załatwianie spraw w Holandii i Polsce.</p>
+        </div>
+        <div class="nl">
+          <p>Mijn naam is Barbara Chodkiewicz en ik woon al bijna 30 jaar in Nederland, waar ik mijn ervaring als beëdigd vertaler Nederlands heb opgebouwd.</p>
+          <p>Ik ben geregistreerd als beëdigd vertaler in zowel Polen (TP/57/16) als Nederland (RBTV – 349), waardoor mijn vertalingen officieel erkend worden door instanties in beide landen. Sinds 2006 bied ik vertaaldiensten aan voor een breed scala aan documenten – van officiële en juridische stukken tot notariële akten en zakelijke teksten.</p>
+          <p>Dankzij mijn ruime ervaring als vertaler én ervaren leraar Nederlands, kan ik mijn diensten perfect afstemmen op de individuele behoeften van mijn klanten. Ik hecht veel waarde aan vertrouwelijkheid, stiptheid en de hoogste kwaliteit, zodat jij jouw zaken in Nederland en Polen zorgeloos kunt regelen.</p>
+        </div>
+      </div>
+    </div>
+    <h2 class="values-h"><span class="pl">Co mnie wyróżnia?</span><span class="nl">Waarom kiezen klanten voor mij?</span></h2>
+    <div class="values">
+      <div class="val"><h3><span class="pl">Rzetelność i dokładność</span><span class="nl">Zorgvuldigheid en nauwkeurigheid</span></h3><p><span class="pl">Tłumaczenia zgodne z wymogami i przepisami.</span><span class="nl">Vertalingen die voldoen aan alle wettelijke vereisten en regelgeving.</span></p></div>
+      <div class="val"><h3><span class="pl">Terminowość</span><span class="nl">Tijdige levering</span></h3><p><span class="pl">Realizacja zleceń zawsze na czas, także ekspresowo.</span><span class="nl">Op tijd en snel, zelfs bij spoedopdrachten.</span></p></div>
+      <div class="val"><h3><span class="pl">Indywidualne podejście</span><span class="nl">Persoonlijke aanpak</span></h3><p><span class="pl">Elastyczność i dopasowanie do potrzeb klienta.</span><span class="nl">Flexibiliteit en afstemming op de behoeften van de klant.</span></p></div>
+      <div class="val"><h3><span class="pl">Konkurencyjne ceny</span><span class="nl">Aantrekkelijke prijzen</span></h3><p><span class="pl">Przystępne stawki i możliwość negocjacji.</span><span class="nl">Vriendelijke prijzen en flexibele voorwaarden.</span></p></div>
+      <div class="val"><h3><span class="pl">Profesjonalna komunikacja</span><span class="nl">Duidelijke en professionele communicatie</span></h3><p><span class="pl">Szybki kontakt i wsparcie na każdym etapie.</span><span class="nl">Snelle contact en ondersteuning op elk moment.</span></p></div>
+      <div class="val"><h3><span class="pl">Poufność</span><span class="nl">Vertrouwelijkheid</span></h3><p><span class="pl">Gwarancja bezpieczeństwa powierzonych dokumentów.</span><span class="nl">Veiligheid en vertrouwelijkheid van uw documenten gegarandeerd.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="wycena">
+  <div class="wrap quote-grid">
+    <div>
+      <div class="head" style="margin-bottom:0">
+        <h2><span class="pl">Bezpłatna wycena – jak to działa?</span><span class="nl">Gratis offerte – hoe werkt het?</span></h2>
+        <p><span class="pl">Aby otrzymać wycenę tłumaczenia, wystarczy przesłać dokument w formacie JPG lub PDF. Na tej podstawie przygotowuję indywidualną, bezpłatną wycenę i ustalamy termin realizacji. Po akceptacji warunków przystępuję do pracy, a gotowe tłumaczenie otrzymasz w uzgodnionym czasie. Szybko, wygodnie i bez zbędnych formalności.</span><span class="nl">Stuur uw document in JPG- of PDF-formaat om een vrijblijvende offerte te ontvangen. Op basis daarvan maak ik een persoonlijke prijsopgave en bespreken we samen de levertijd. Na uw akkoord ga ik direct aan de slag en ontvangt u de vertaling binnen de afgesproken termijn. Snel, eenvoudig en zonder onnodige formaliteiten.</span></p>
+      </div>
+      <ol class="steps">
+        <li><i class="mark fr"></i><span class="pl">Wyślij dokument (JPG, PDF)</span><span class="nl">Stuur uw document (JPG, PDF)</span></li>
+        <li><i class="mark fr"></i><span class="pl">Otrzymasz indywidualną wycenę</span><span class="nl">U ontvangt een persoonlijke offerte</span></li>
+        <li><i class="mark fr"></i><span class="pl">Ustalamy termin realizacji</span><span class="nl">De levertijd wordt in overleg bepaald</span></li>
+        <li><i class="mark fr"></i><span class="pl">Wysyłka tłumaczenia</span><span class="nl">Verzending van de vertaling</span></li>
+      </ol>
+      <h3 class="contact-h"><span class="pl">Zostańmy w kontakcie</span><span class="nl">Laten we in contact blijven</span></h3>
+      <ul class="contact-list">
+        <li><small><span class="pl">telefon kontaktowy</span><span class="nl">Telefoonnummer</span></small><a href="tel:+31622624226">+31 622 624 226</a></li>
+        <li><small><span class="pl">adres e-mail</span><span class="nl">e-mail</span></small><a href="mailto:info@poolsvertalen.com">info@poolsvertalen.com</a></li>
+        <li><small><span class="pl">adres</span><span class="nl">adres</span></small><span>Postbus 169, 2350 AD Leiderdorp<span class="pl">, Holandia</span></span></li>
+      </ul>
+    </div>
+    <form class="form fr" id="form" novalidate>
+      <h3><span class="pl">Formularz kontaktowy</span><span class="nl">Contactformulier</span></h3>
+      <div class="row">
+        <label class="field"><span><span class="pl">Imię</span><span class="nl">Voornaam</span> *</span><input name="imie" autocomplete="given-name" required></label>
+        <label class="field"><span><span class="pl">Nazwisko</span><span class="nl">Achternaam</span> *</span><input name="nazwisko" autocomplete="family-name" required></label>
+      </div>
+      <label class="field"><span>E-mail *</span><input type="email" name="email" autocomplete="email" required></label>
+      <label class="field"><span><span class="pl">Wiadomość</span><span class="nl">Bericht</span></span><textarea name="wiad" rows="4"></textarea></label>
+      <div class="field"><span><span class="pl">Załącz plik</span><span class="nl">Bestand toevoegen</span></span>
+        <label class="drop"><input type="file" accept=".jpg,.jpeg,.pdf"><span id="dropTxt"><span class="pl">Upuść plik lub pobierz z urządzenia</span><span class="nl">Sleep hier je bestand of klik om te uploaden</span> (JPG, PDF)</span></label>
+      </div>
+      <label class="consent"><input type="checkbox" required><span><span class="pl">Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w formularzu</span><span class="nl">Ik geef toestemming voor de verwerking van mijn persoonsgegevens.</span></span></label>
+      <button class="btn" type="submit"><span class="pl">Wyślij wiadomość</span><span class="nl">Bericht verzenden</span></button>
+      <p class="note" id="note" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<section class="faq" id="pytania">
+  <div class="wrap faq-grid">
+    <div class="head">
+      <h2><span class="pl">Najczęściej zadawane pytania</span><span class="nl">Veelgestelde vragen</span></h2>
+      <p><span class="pl">W tej sekcji znajdziesz odpowiedzi na najczęściej zadawane pytania dotyczące moich usług. Jeśli masz dodatkowe wątpliwości, skontaktuj się ze mną, chętnie wyjaśnię wszelkie szczegóły.</span><span class="nl">In deze sectie vindt u antwoorden op de meest gestelde vragen over mijn diensten. Heeft u nog andere vragen of twijfels? Neem gerust contact met mij op – ik beantwoord ze graag en licht alles verder toe.</span></p>
+    </div>
+    <div>
+      <details open><summary><span class="pl">Ile czasu zajmuje realizacja tłumaczenia?</span><span class="nl">Hoe lang duurt het om een vertaling uit te voeren?</span></summary><p><span class="pl">Czas realizacji zależy od objętości dokumentu oraz jego specyfiki. Standardowe tłumaczenie zazwyczaj trwa 1–3 dni robocze. Oferuję również możliwość ekspresowej realizacji.</span><span class="nl">De levertijd hangt af van de omvang en de aard van het document. Een standaardvertaling duurt meestal 1 tot 3 werkdagen. Ik bied ook de mogelijkheid tot een spoedvertaling.</span></p></details>
+      <details><summary><span class="pl">Czym różni się tłumaczenie zwykłe od tłumaczenia poświadczonego?</span><span class="nl">Wat is het verschil tussen een gewone vertaling en een beëdigde vertaling?</span></summary><p><span class="pl">Tłumaczenie zwykłe to przekład tekstu bez dodatkowych formalności. Tłumaczenie poświadczone (przysięgłe) zawiera pieczęć i podpis tłumacza przysięgłego, co potwierdza jego zgodność z oryginałem i nadaje mu moc prawną.</span><span class="nl">Een gewone vertaling is een vertaling van de tekst zonder aanvullende formaliteiten. Een beëdigde vertaling bevat de stempel en handtekening van een beëdigd vertaler, wat de overeenstemming met het origineel bevestigt en de vertaling juridische geldigheid geeft.</span></p></details>
+      <details><summary><span class="pl">Co oznacza tłumaczenie poświadczone?</span><span class="nl">Wat betekent een beëdigde vertaling?</span></summary><p><span class="pl">Tłumaczenie poświadczone to dokument przygotowany przez tłumacza przysięgłego, który swoim podpisem i pieczęcią gwarantuje, że przekład jest wierny oryginałowi. Jest wymagane w przypadku dokumentów oficjalnych, takich jak akty urodzenia, umowy czy świadectwa.</span><span class="nl">Een beëdigde vertaling is een document dat is opgesteld door een beëdigd vertaler, die met zijn of haar handtekening en stempel garandeert dat de vertaling trouw is aan het origineel. Een beëdigde vertaling is vereist voor officiële documenten, zoals bijvoorbeeld: geboorteakten, overeenkomsten en diploma’s.</span></p></details>
+      <details><summary><span class="pl">Skąd mam wiedzieć, czy potrzebuję tłumaczenia poświadczonego?</span><span class="nl">Hoe weet ik of ik een beëdigde vertaling nodig heb?</span></summary><p><span class="pl">Jeśli dokument jest wymagany przez urząd, sąd, notariusza lub inną instytucję, najczęściej musi to być tłumaczenie poświadczone. W razie wątpliwości warto skonsultować się z instytucją, która wymaga dokumentu, lub zapytać mnie o poradę.</span><span class="nl">Als een document vereist is door een overheidsinstantie, rechtbank, notaris of andere organisatie, moet het meestal een beëdigde vertaling zijn. Bij twijfel raad ik aan om contact op te nemen met de instantie die het document verlangt, of om mij om advies te vragen.</span></p></details>
+      <details><summary><span class="pl">W jakiej formie mogę dostarczyć dokumenty do tłumaczenia?</span><span class="nl">In welke vorm kan ik documenten aanleveren voor vertaling?</span></summary><p><span class="pl">Dokumenty można przesłać w formie skanu lub zdjęcia dobrej jakości drogą mailową. W przypadku tłumaczeń poświadczonych preferowany jest skan, ale w niektórych sytuacjach może być wymagany oryginał.</span><span class="nl">Documenten kunnen digitaal worden aangeleverd via e-mail, bij voorkeur als scan of als foto van hoge kwaliteit. Voor beëdigde vertalingen heeft een scan de voorkeur, hoewel in specifieke gevallen het originele document vereist kan zijn.</span></p></details>
+      <details><summary><span class="pl">Jakie są zasady płatności?</span><span class="nl">Wat zijn de betalingsvoorwaarden?</span></summary><p><span class="pl">Płatność można uiścić przelewem bankowym na podstawie faktury, którą wystawiam po uzgodnieniu warunków współpracy. W wyjątkowych przypadkach możliwa jest płatność gotówką.</span><span class="nl">De betaling kan worden voldaan via een bankoverschrijving op basis van een factuur, die ik opstel nadat we samen de voorwaarden hebben afgestemd. In uitzonderlijke gevallen is betaling contant ook mogelijk.</span></p></details>
+      <details><summary><span class="pl">W jaki sposób mogę odebrać gotowe tłumaczenie?</span><span class="nl">Hoe ontvang ik mijn vertaling?</span></summary><p><span class="pl">Gotowe tłumaczenie mogę przesłać w formie elektronicznej (PDF) lub w wersji papierowej za pośrednictwem poczty tradycyjnej lub kuriera. Sposób dostarczenia ustalam indywidualnie z klientem.</span><span class="nl">De vertaling kan ik in digitale vorm (PDF) toesturen of als papieren exemplaar per post of koerier verzenden. De wijze van levering stem ik altijd af in overleg met de klant.</span></p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#start"><svg viewBox="0 0 80 72" aria-hidden="true"><path d="M47 4h26v26" fill="none" stroke="#fff" stroke-width="2.2"/><path d="M7 42v26h26" fill="none" stroke="#fff" stroke-width="2.2"/><text x="24" y="46" font-family="Lora,Georgia,serif" font-size="34" fill="#fff">B</text><text x="35" y="56" font-family="Lora,Georgia,serif" font-size="34" fill="#7FA382">C</text></svg><span><b>Poolsvertalen.com</b><small>Barbara Chodkiewicz</small></span></a>
+        <p class="claim"><span class="pl">Profesjonalne tłumaczenia PL-NL dla firm i klientów indywidualnych.</span><span class="nl">Professionele vertalingen PL-NL voor bedrijven en particulieren.</span></p>
+      </div>
+      <div>
+        <h3><span class="pl">Kontakt</span><span class="nl">Contact</span></h3>
+        <ul>
+          <li><a href="tel:+31622624226">+31 622 624 226</a></li>
+          <li><a href="mailto:info@poolsvertalen.com">info@poolsvertalen.com</a></li>
+          <li>Postbus 169<br>2350 AD Leiderdorp</li>
+          <li><a href="https://www.linkedin.com/in/barbara-chodkiewicz-9388b145/" rel="noopener" target="_blank">LinkedIn</a> · <a href="https://www.instagram.com/niderlandypopolsku/" rel="noopener" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="pl">Na skróty</span><span class="nl">Direct naar</span></h3>
+        <ul>
+          <li><a href="#o-mnie"><span class="pl">O mnie</span><span class="nl">Over mij</span></a></li>
+          <li><a href="#notarialne"><span class="pl">Tłumaczenia notarialne</span><span class="nl">Notariële vertalingen</span></a></li>
+          <li><a href="#tlumaczenia"><span class="pl">Tłumaczenia pisemne</span><span class="nl">Schriftelijke vertalingen</span></a></li>
+          <li><a href="#tlumaczenia"><span class="pl">Tłumaczenia ustne</span><span class="nl">Tolkdiensten</span></a></li>
+          <li><a href="#pytania"><span class="pl">Najczęściej zadawane pytania</span><span class="nl">Veelgestelde vragen</span></a></li>
+          <li><a href="#wycena"><span class="pl">Kontakt</span><span class="nl">Contact</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="y">2026</span> Poolsvertalen.com · Barbara Chodkiewicz</span>
+      <a class="wylinka-badge" href="https://wylinka.pl/?utm_source=poolsvertalen.com&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a href="tel:+31622624226">+31 622 624 226</a>
+  <a href="#wycena"><span class="pl">Zamów wycenę</span><span class="nl">Gratis offerte aanvragen</span></a>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Zdjęcie">
+  <button class="x" type="button" aria-label="Zamknij">×</button>
+  <button class="pv" type="button" aria-label="Poprzednie">‹</button>
+  <img alt="">
+  <p></p>
+  <button class="nx" type="button" aria-label="Następne">›</button>
+</div>
+
+<script>
+(function(){
+var d=document,h=d.documentElement,b=d.body;
+d.getElementById('y').textContent=new Date().getFullYear();
+// język
+function setLang(l){h.lang=l;d.querySelectorAll('.lang button').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.l===l)});d.title=l==='nl'?'Poolsvertalen.com - beëdigd vertaler Nederlands-Pools':'Poolsvertalen.com - tłumacz przysięgły języka niderlandzkiego';try{localStorage.setItem('pv-lang',l)}catch(e){}}
+d.querySelectorAll('.lang button').forEach(function(x){x.addEventListener('click',function(){setLang(x.dataset.l)})});
+try{var s=localStorage.getItem('pv-lang');if(s==='nl')setLang('nl')}catch(e){}
+// menu
+var bg=d.querySelector('.burger');
+function closeMenu(){b.classList.remove('menu-open');bg.setAttribute('aria-expanded','false')}
+bg.addEventListener('click',function(){var o=b.classList.toggle('menu-open');bg.setAttribute('aria-expanded',o)});
+d.querySelectorAll('#nav a').forEach(function(a){a.addEventListener('click',closeMenu)});
+addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu()});
+// pasek mobilny
+var mb=d.getElementById('mbar'),hero=d.getElementById('start');
+addEventListener('scroll',function(){mb.classList.toggle('on',scrollY>hero.offsetHeight*.8)},{passive:true});
+// karuzele w kartach
+var all=[].slice.call(d.querySelectorAll('[data-lb] img'));
+d.querySelectorAll('[data-car]').forEach(function(c){
+  var n=c.children.length,nav=d.createElement('div');nav.className='car-nav';
+  nav.innerHTML='<button type="button" aria-label="Poprzednie">‹</button><span>1/'+n+'</span><button type="button" aria-label="Następne">›</button>';
+  c.parentNode.appendChild(nav);var lab=nav.querySelector('span');
+  function idx(){return Math.round(c.scrollLeft/c.clientWidth)}
+  function go(i){c.scrollTo({left:((i+n)%n)*c.clientWidth,behavior:'smooth'})}
+  nav.children[0].onclick=function(){go(idx()-1)};nav.children[2].onclick=function(){go(idx()+1)};
+  c.addEventListener('scroll',function(){lab.textContent=(idx()+1)+'/'+n},{passive:true});
+  var down=false,x0=0,s0=0,moved=false;
+  c.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;moved=false;x0=e.clientX;s0=c.scrollLeft;c.classList.add('drag')});
+  addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-x0;if(Math.abs(dx)>5)moved=true;c.scrollLeft=s0-dx});
+  addEventListener('pointerup',function(){if(!down)return;down=false;c.classList.remove('drag');var i=Math.round(c.scrollLeft/c.clientWidth);if(moved){var dir=c.scrollLeft-s0;if(Math.abs(dir)>40&&i===Math.round(s0/c.clientWidth))i+=dir>0?1:-1}go(Math.max(0,Math.min(n-1,i)))});
+  c.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();moved=false}},true);
+});
+// lightbox
+var lb=d.getElementById('lb'),li=lb.querySelector('img'),lp=lb.querySelector('p'),cur=0;
+function show(i){cur=(i+all.length)%all.length;li.src=all[cur].src;li.alt=all[cur].alt;lp.textContent=all[cur].alt+'  ·  '+(cur+1)+'/'+all.length}
+d.querySelectorAll('[data-lb]').forEach(function(btn){btn.addEventListener('click',function(){show(all.indexOf(btn.querySelector('img')));lb.classList.add('on');lb.querySelector('.x').focus()})});
+lb.querySelector('.x').onclick=function(){lb.classList.remove('on')};
+lb.querySelector('.pv').onclick=function(){show(cur-1)};lb.querySelector('.nx').onclick=function(){show(cur+1)};
+lb.addEventListener('click',function(e){if(e.target===lb)lb.classList.remove('on')});
+addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+var sx=0;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});lb.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)show(cur+(dx<0?1:-1))});
+// formularz pokazowy
+var f=d.getElementById('form'),fi=f.querySelector('input[type=file]');
+fi.addEventListener('change',function(){if(fi.files[0])d.getElementById('dropTxt').textContent=fi.files[0].name});
+f.addEventListener('submit',function(e){e.preventDefault();d.getElementById('note').textContent=h.lang==='nl'?'Dit is een voorbeeldpagina – het formulier verstuurt niets.':'To podgląd – formularz nie wysyła wiadomości.'});
+})();
+</script>
+</body>
+</html>
